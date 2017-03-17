@@ -13,7 +13,7 @@ import { Storage } from '@ionic/storage';
 
 import { BeerService } from '../../providers/beer.service';
 import { DetailPage } from '../detail/detail';
-import { PopoverPage } from '../PopoverPage/popover-page';
+import { PopoverPage } from '../popoverPage/popover-page';
 import { Camera } from '../camera/camera';
 
 @Component({
@@ -63,7 +63,7 @@ export class HomePage {
   }
 
   openDetail(beer: Object) {
-    this.navCtrl.push(DetailPage, { data: beer });
+    this.navCtrl.push(DetailPage, { beer: beer });
   }
 
   search(fab: FabContainer) {

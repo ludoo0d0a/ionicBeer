@@ -11,12 +11,8 @@ export class DetailPage {
 
   public beer: any;
 
-  constructor(
-    public navCtrl: NavController,
-    public params: NavParams) { }
-
-  ionViewDidLoad() {
-    this.beer = this.params.get('data');
+  constructor( public navCtrl: NavController,public params: NavParams) { 
+    this.beer = this.params.get('beer');
   }
 
   shareSite(website: string) {

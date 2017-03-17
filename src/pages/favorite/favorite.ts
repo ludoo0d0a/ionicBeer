@@ -7,9 +7,9 @@ import { BeerService } from '../../providers/beer.service';
 import { DetailPage } from '../detail/detail';
 
 @Component({
-  templateUrl: 'contact.html'
+  templateUrl: 'favorite.html'
 })
-export class ContactPage {
+export class FavoritePage {
 
   public beers: any[];
 
@@ -38,7 +38,7 @@ export class ContactPage {
   }
 
   openDetail(beer: Object) {
-    this.navCtrl.push(DetailPage, { data: beer });
+    this.navCtrl.push(DetailPage, { beer: beer });
   }
 
   clear() {
